@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 transitional//EN"
+        "http://www.w3.org/tr/xhtml1/Dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <title>验证登录界面</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .p1 {
+            font-size: 12px;
+            text-align: right;
+            height: 28px;
+            width: 80px;
+        }
+
+        .borSty {
+            font-size: 12px;
+            border: solid 1px #61b16a;
+            width: 150px;
+            height: 20px;
+            float: left;
+            outline: none;
+        }
+
+       /* input:focus{
+            outline: none;
+        }*/
+
+        .submit {
+            font-size: 12px;
+            background-color: #eeeeee;
+            border: solid 1px #cccccc;
+            width: 60px;
+            height: 23px;
+            padding-top: 3px;
+        }
+
+        #foot{
+            margin-left: 280px;
+        }
+        #mytables{
+            margin-left: 200px;
+        }
+
+        #mytable {
+            margin-top: 0px;
+            margin-right: auto;
+            margin-bottom: 0px;
+            margin-left: auto;
+            width: 760px;
+        }
+
+        #main {
+            border-left: solid 1px #7bcc87;
+            border-right: solid 1px #7bcc87;
+            /*background-color: #f9f8ff;*/
+        }
+
+        #center {
+            margin-top: 0px;
+            margin-right: auto;
+            margin-bottom: 0px;
+            margin-left: auto;
+            width: 80%;
+        }
+
+        .red {
+            border: solid 1px #F00;
+            font-size: 12px;
+            width: 150px;
+            height: 20px;
+            float: left;
+        }
+
+        div {
+            margin-left: 5px;
+            font-size: 12px;
+            line-height: 20px;
+            text-align: left;
+            float: left;
+            color: #F00;
+        }
+
+        .sty {
+            margin-left: 50px;
+        }
+    </style>
+    <script>
+        function $(pElementID) {
+            return document.getElementById(pElementID);
+        }
+        //更改DOM元素的class名称
+        function updateRed(obj) {
+            var mObj = $(obj);
+            mObj.className = "red";
+        }
+        // 给元素边框颜色为红色
+        function updateIntro() {
+            var intro = $("intro");
+            intro.style.borderColor = "red";
+        }
+        //更改边框颜色为绿色
+        function checkIntro() {
+            var intro = $("intro");
+            intro.style.borderColor = "#61b16a";
+        }
+
+        function updateRed(obj){
+            var mobj=$(obj);
+            mobj.classname="red";
+        }
+
+        function Usernames(){
+            var username=$("username");
+            var userMess=$("userMess");
+            userMess.innerHTML="";
+            if(username.value==""){
+                userMess.innerHTML="请输入用户名！";
+                username.className="red";
+                return false;
+            }else if (username.value.length>16||username.value.length<4){
+                userMess.innerHTML = "用户名必须为4-16位字符，请重新填写";
+                userName.className = "red";
+                return false;
+            }
+            username.classname="borsty";
+            return true;
+        }
+
+        function checkPwd() {
+            var pwd = $("pwd");
+            var pwdMess = $("pwdMess");
+            pwdMess.innerHTML = "";
+            if (pwd.value == "") {
+                pwdMess.innerHTML = "密码不能为空";
+                pwd.className = "red";
+                return false;
+            } else if (pwd.value.length < 6) {
+                pwdMess.innerHTML = "密码不能少于6位";
+                pwd.className = "red";
+                return false;
+            }
+            pwd.className = "borSty";
+            return true;
+        }
+        function check() {
+            if (Usernames() && checkPwd() ) {
+                return true;
+            }
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+<table id="mytable" border="0" cellspacing="0" cellpadding="0">
+    <form action="" method="post" name="myform" onsubmit="return check()">
+        <tr>
+            <td id="imgs"><img src="img/QQ截图20170605003515.png"/></td>
+        </tr>
+        <tr>
+            <td id="main">
+                <table id="mytables" width="83%" border="0" cellpadding="0" cellspacing="0" id="center">
+                    <tr>
+                        <td width="112" class="p1"> 用户名：</td>
+                        <td width="496"><input id="username" type="text" class="borSty" onblur="Usernames()"
+                                               onfocus="updateRed('username')">
+                            <div id="userMess"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p1"> 密&nbsp;&nbsp;码：</td>
+                        <td><input id="pwd" type="password" class="borSty" onblur="checkPwd()"
+                                   onfocus="updateRed('pwd')">
+                            <div id="pwdMess"></div>
+                        </td>
+
+                    </tr>
+            </td>
+        </tr>
+
+    </table>
+        <table id="foot">
+            <tr>
+                <td background="images/reg-end.jpg" style="height:63px; text-align:center;">
+                    <input name="B1" type="submit" value="登录" class="submit"/>&nbsp;&nbsp;
+                    <input name="B2" type="reset" value="重置" class="submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+</table>
+</body>
+</html>

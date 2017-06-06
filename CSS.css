@@ -1,0 +1,288 @@
+body {
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#header {
+    width: 960px;
+    margin: 0px auto;
+}
+
+ul li {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#header_top, #header_mid, #foot {
+    width: 955px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+}
+
+.header_top {
+    border: 1px solid;
+    background-image: url(../image/images/dd_header_bg.gif);
+    background-repeat: repeat-x;
+    height: 24px;
+}
+
+.header_top_left {
+    position: absolute;
+    float: left;
+    width: 760px;
+    padding-left: 10px;
+    line-height: 28px;
+}
+
+.header_top_right {
+    position: relative;
+    float: right;
+    width: 460px;
+    padding-right: 10px;
+    line-height: 28px;
+    text-align: right;
+}
+
+.header_top_right li {
+    float: right;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.header_mid_left {
+    float: left;
+    padding-left: 10px;
+}
+
+/*.logo{
+    width: 130px;
+    padding-top: 13px;
+    height: 47px;
+}*/
+a {
+    text-decoration: none;
+}
+
+.header_mid_left li {
+    float: left;
+    background-image: url(../image/images/dd_head_bg_mid.gif);
+    background-repeat: repeat-x;
+    height: 28px;
+    padding: 0px 3px;
+}
+
+.header_mid_right {
+    float: right;
+}
+
+.header_mid_right li {
+    float: right;
+    padding: 0px 4px;
+}
+
+.header_foot {
+    float: left;
+    background-image: url(../image/images/dd_head_bg_mid.gif);
+    background-repeat: repeat-x;
+    background-position: 0px -63px;
+    height: 27px;
+    width: 960px;
+    line-height: 28px;
+    text-align: center;
+    padding: 0px 4px;
+}
+#mid_mid{
+    width: 99%;
+}
+#left {
+    width: 200px;
+    float: left;
+}
+
+#left .left_left {
+    padding: 10px;
+}
+
+* {
+    clear: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+#dd_down{
+    display:none;
+}
+
+#men.header_top_right {
+    width: 1000px;
+    margin: 30px auto;
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+    height: 40px;
+    line-height: 40px;
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+.header_top_right{
+
+    width: 600px;
+    height: 40px;
+    margin: 0 auto;
+}
+ul{
+    list-style: none
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+#container {
+    width: 500px;
+    height: 400px;
+    border: 3px solid #333;
+    overflow: hidden;
+    position: absolute;
+    left:30%;
+    top:15.5%;
+}
+
+#list {
+    width: 4200px;
+    height: 400px;
+    position: absolute;
+    z-index: 1;
+}
+
+#list img {
+    float: left;
+}
+
+#buttons {
+    position: absolute;
+    height: 10px;
+    width: 100px;
+    z-index: 2;
+    bottom: 20px;
+    left: 200px;
+}
+
+#buttons span {
+    cursor: pointer;
+    float: left;
+    border: 1px solid #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #333;
+    margin-right: 5px;
+}
+
+#buttons .on {
+    background: orangered;
+}
+
+.arrow {
+    cursor: pointer;
+    display: none;
+    line-height: 39px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 2;
+    top: 180px;
+    background-color: RGBA(0, 0, 0, .3);
+    color: #fff;
+}
+
+.arrow:hover {
+    background-color: RGBA(0, 0, 0, .7);
+}
+
+#container:hover .arrow {
+    display: block;
+}
+
+#prev {
+    left: 20px;
+}
+
+#next {
+    right: 20px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    clear: none;
+}
+
+#main {
+
+    float:right;
+    border: 1px solid #ccc;
+    height: 350px;
+    width: 160px;
+    overflow: hidden;
+    margin: 20px auto;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+#Box1 {
+    height: 144px;
+    width: 335px;
+    margin-left: 25px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+#main ul li {
+    height: 24px;
+}
+
+#fjx li{
+    text-align: center;
+    clear: none;
+    padding: 5px;
+    margin-top: 450px;
+    background-color: #888888;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#foot_foot{
+    position:absolute;
+    width: 99%;
+}
+#foot_foot #foot_db .li1 li{
+    padding: 10px 10px 0px 0px;
+    float: left;
+}
+#foot_foot_foot #foot_bd .li2 li{
+    padding: 40px 20px 0px 0px;
+    float: left;
+
+}
